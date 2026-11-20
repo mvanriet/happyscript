@@ -1,0 +1,2 @@
+
+::: happyscript.staticscriptmanager.StaticScriptManager

@@ -1,0 +1,27 @@
+site_name: HappyScript
+
+nav:
+  - Home: index.md
+  - ScriptManagers:
+    - StaticScriptManager: static_script_manager.md
+    - ScriptManager: script_manager.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: false
+            show_root_members_full_path: false
+            show_signature_annotations: true
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - content.code.copy
+    - search.highlight
+    
