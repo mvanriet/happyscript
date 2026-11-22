@@ -95,24 +95,55 @@ class StaticScriptManager(object):
         """
         pass
 
-    def add_object(self, objName, theObject):
+    def add_object(self, objName: str, theObject):
         """ Add an object that can be used as parameter in the script functions.
+
+        Args:
+            objName (str): Name you want to give to this object.  This must be a valid Python variable name.
+            theObject (any): The object to add, which can be accessed by the given name.
         """
         pass
 
     def add_objects(self, *args, **kwargs):
-        """ Add an object that can be used as parameter in the script functions.
-           See ScriptParams.add_objects()
+        """ Add one or more object that can be used as parameter in the script functions.
+
+        Args:
+            *args : List of objects to add.
+            **kwargs : objects to add, with the name taken from the specified parameter name.
         """
         pass
 
     def add_module(self, module, group_name=None):
         """ Reads scripts from a python module.
+            All files in the directory will be scanned for test functions.
+            A new tab will be added in the 'scripts' panel, and 
+            all the files and their test functions will be shown in a treeview.
+            The __init__.py file in the module should have an import for all python files you want to include.
+
+        Args:
+            module (module): The python module containing the scripts to add.
+            group_name (str): Name for this set of scripts. Module name will be used if not specified. 
+
+        See Also:
+            [add_scripts()][happyscript.scriptmanager.ScriptManager.add_scripts]
         """
         pass
 
     def add_scripts(self, script_dir, group_name=None):
-        """ Reads scripts from a directory : not possible with StaticScriptManager.
+        """ Reads scripts from a directory.
+            All python files in the directory will be scanned for test functions.
+            A new tab will be added in the 'scripts' panel, and 
+            all the files and their test functions will be shown in a treeview.
+
+            Note that this is not possible with StaticScriptManager. Use ScriptManager instead.
+
+        Args:
+            script_dir (str):   Full path to the directory with scripts
+            group_name (str):  Name for this set of scripts.  Dirname will be used if not specified. 
+
+        See Also:
+            [add_module()][happyscript.staticscriptmanager.StaticScriptManager.add_module]
+            
         """
         pass
 
@@ -139,14 +170,18 @@ class StaticScriptManager(object):
         """
         pass
 
-    def ask_serials(self, count, labels=None, filters=None, add_to_info=True):
+    def ask_serials(self, count, labels=None, filters=None, add_to_info=True) -> list[str] | None:
         """ Show standard form for asking serial numbers.
             The serials will be (by default) filled in in info, clearing any previous serials.
         
-            @param   count   how many numbers : 1 - 5 numbers
-            @param   labels  List of strings to show left from each serial number entry field
-            @param   filters regular expression for each serial number.  Items can be None
-            @return  list of serial numbers, or None if no user cancelled
+        Args:
+            count (int):   how many numbers : 1 - 5 numbers
+            labels (list of str):  List of strings to show left from each serial number entry field
+            filters (list of str): regular expression for each serial number.  Items can be None
+            add_to_info (bool):   Whether to add the serials to the info object
+
+        Returns:
+            list of serial numbers, or None if the user pressed the 'Cancel' button
         """
         pass
 
@@ -155,10 +190,13 @@ class StaticScriptManager(object):
             The panel constructor MUST have a parameter named 'parent'.  This will be filled in 
             automatically with the object containing the new panel. 
         
-            @param  Title        Title for the panel
-            @param  panelType    class to instantiate
-            @param  args         parameters to supply to the constructor of the class
-            @return The newly created panel
+        Args:
+            title (str):        Title for the panel
+            panelType (type):   class to instantiate
+            args:               parameters to supply to the constructor of the class
+
+        Returns:
+            The newly created panel
         """
         pass
 

@@ -16,24 +16,29 @@ from .scriptreader import ScriptReader
 from .staticscriptmanager import StaticScriptManager
 
 class ScriptManager(StaticScriptManager):
-    """
-    classdocs
+    """ A subclass of StaticScriptManager that allows live reloading of test scripts.
     """
 
     def __init__(self, title: str=None, colors=None, use_yaml: bool=False):
-        """
-            Constructor
-            
-            @param  Optional title for main window.
-            @param  Optional color scheme for test list.
+        """ Constructor
+
+        Args:
+            title (str): title for main window.
+            colors (list): color scheme for test list :
                     0=green, 1=blue, 2=yellow, 3=grey, 4=orange, 5=darker blue 
+            use_yaml (bool): whether to use YAML when writing an info file.  Standard is json.
+
         """
         pass
 
     def add_scripts(self, script_dir: str, group_name: str=None):
-        """ Reads scripts from a directory. 
-            Then adds a script treeview window with the scripts from the specified directory.
-            @param script_dir   Full path to the directory with scripts
-            @param group_name  Name for this set of scripts.  Dirname will be used if not specified. 
+        """ Reads scripts from a directory.
+            All python files in the directory will be scanned for test functions.
+            A new tab will be added in the 'scripts' panel, and 
+            all the files and their test functions will be shown in a treeview.
+
+        Args:
+            script_dir (str):   Full path to the directory with scripts
+            group_name (str):  Name for this set of scripts.  Dirname will be used if not specified. 
         """
         pass

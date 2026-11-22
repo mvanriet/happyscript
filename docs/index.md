@@ -33,7 +33,7 @@ This will give you a main window with a lot of options, depending on the type of
 
 You can get an idea of the possibilities by looking at the tutorial on [github](https://github.com/mvanriet/happyscript/tree/main/examples/tutorial/).  Further information will be gradually added here on ReadTheDocs.
 
-Since [ScriptManager][happyscript.scriptmanager.ScriptManager] loads its Python scripts dynamically, the resulting application cannot be converted to a static executable.  To allow this anyway, there is a variant [ScriptManager][happyscript.staticscriptmanager.StaticScriptManager] which is similar, but requires you to import the scripts explicitly, and therefore does not offer script reloads.
+Since [ScriptManager][happyscript.scriptmanager.ScriptManager] loads its Python scripts dynamically, the resulting application cannot be converted to a static executable.  To allow this anyway, there is a variant [StaticScriptManager][happyscript.staticscriptmanager.StaticScriptManager] which is similar, but requires you to import the scripts explicitly, and therefore does not offer script reloads.
 
 
 ## Splashmenu

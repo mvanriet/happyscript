@@ -75,9 +75,6 @@ class PanelTests(PanelTests_Base):
         """
         pass
 
-    def OnListRightClick(self, event):
-        pass
-
     def add_test(self, description, scriptname, **args):
         """ Add a single test to the test list.
             @param description    Name to appear in test list
