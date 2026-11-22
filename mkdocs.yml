@@ -2,9 +2,10 @@ site_name: HappyScript
 
 nav:
   - Home: index.md
-  - ScriptManagers:
+  - "Main classes":
     - StaticScriptManager: static_script_manager.md
     - ScriptManager: script_manager.md
+    - SplashMenu: splashmenu.md
 
 plugins:
   - search

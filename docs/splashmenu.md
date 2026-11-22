@@ -1,0 +1,2 @@
+
+::: happyscript.splashmenu.splashmenumain.SplashMenu

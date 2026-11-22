@@ -50,8 +50,8 @@ class StaticScriptManager(object):
             use_yaml (bool): whether to use YAML when writing an info file.  Standard is json.
 
         Attributes:
-            on_batch_start (callable): Set this to your callback function for the start of a batch.  Takes no arguments.
-            on_batch_end (callable): Set this to your callback function for the end of a batch.  Takes no arguments.
+            on_batch_start (callable): Set this to your callback function for the start of a batch.  It must take no arguments.
+            on_batch_end (callable): Set this to your callback function for the end of a batch.  It must take no arguments.
         """
         pass
 
