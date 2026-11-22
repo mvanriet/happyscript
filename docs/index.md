@@ -31,7 +31,7 @@ mngr.run()
 ```
 This will give you a main window with a lot of options, depending on the type of user.  Click the leftmost icon in the menu bar to enable more options.
 
-You can get an idea of the possibilities by looking at the tutorial on [github](https://github.com/mvanriet/happyscript/examples/tutorial).  Further information will be gradually added here on ReadTheDocs.
+You can get an idea of the possibilities by looking at the tutorial on [github](https://github.com/mvanriet/happyscript/tree/main/examples/tutorial/).  Further information will be gradually added here on ReadTheDocs.
 
 Since [ScriptManager][happyscript.scriptmanager.ScriptManager] loads its Python scripts dynamically, the resulting application cannot be converted to a static executable.  To allow this anyway, there is a variant [ScriptManager][happyscript.staticscriptmanager.StaticScriptManager] which is similar, but requires you to import the scripts explicitly, and therefore does not offer script reloads.
 
@@ -49,4 +49,4 @@ menu.set_button(2,1, "subdir/another_image.png", "subdir/another_test.exe", "COM
 menu.run()
 ```
 
-See the [examples](https://github.com/mvanriet/happyscript/examples/splashmenu) for a demo.
+See the [examples](https://github.com/mvanriet/happyscript/tree/main/examples/splashmenu) for a demo.

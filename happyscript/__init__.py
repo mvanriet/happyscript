@@ -1,5 +1,5 @@
 """HappyScript - handy script launcher"""
-__version__ = '0.0.59'
+__version__ = '0.0.61'
 from .scriptmanager import ScriptManager
 from .staticscriptmanager import StaticScriptManager
 from .inifile import IniFile
